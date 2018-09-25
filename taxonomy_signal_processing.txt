@@ -1,4 +1,0 @@
-Image Processing	digital image processing, image analysis, edge detection,image processing applications,image processing tasks,image editing,image enhancement,image understanding,hyperspectral image analysis
-Video Processing	video decoding, video analysis, moving object detection, gaze tracking, gaze tracking, face tracking, hardware acceleration,multimedia processing, video segmentation
-Wireless communication	mobile communication systems, satellite communication, wireless mobile, wireless access, wireless mobile, optical communications, wireless broadband, satellite communication, wireless standards
-Audio Signal Processing	audio processing, speech processing, language processing, speech and audio, sound synthesis, audio compression, music classification, speech and audio coding, automatic speaker recognition
