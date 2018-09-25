@@ -36,7 +36,7 @@ file = '../AutoPhrase/ARL/segmentation.txt.phrase_as_word.retain_alphanumeric'
 if len(sys.argv) > 1:
     file = sys.argv[1]
 
-category_seedConcepts_file = './taxonomy_signal_processing_application.txt'
+category_seedConcepts_file = './taxonomy_scientific_corpus_application.txt'
 if len(sys.argv) > 2:
     category_seedConcepts_file = sys.argv[2]
 

@@ -2,7 +2,7 @@ from lxml import etree
 import re
 
 
-file = '../data/signal_processing/Signal Processing (2002-2016).xml'
+file = '../data/scientific_corpus/Signal Processing (2002-2016).xml'
 
 
 def removeNonASCII(doc, replaceWithSpace=True):
@@ -22,7 +22,7 @@ def removeNewLine(doc):
 
 
 def fill():
-    with open('../data/signal_processing__oneDocPerLine.txt', 'w') as f_w:
+    with open('../data/scientific_corpus__oneDocPerLine.txt', 'w') as f_w:
         coords = etree.iterparse(file, tag='record')
         for action, row in coords:
             title_el = row.find('title')
@@ -39,6 +39,7 @@ def fill():
 
 def main():
     fill()
+
 
 if __name__ == '__main__':
     main()

@@ -1,5 +1,5 @@
-TEXT=../data/signal_processing__oneDocPerLine.txt
-CATEGORY_SEEDCONCEPTS=taxonomy_signal_processing.txt
+TEXT=../data/scientific_corpus__oneDocPerLine.txt
+CATEGORY_SEEDCONCEPTS=taxonomy_scientific_corpus.txt
 MODEL='ARL'
 SEGGED_TEXT_categorized=$TEXT.categorized
 

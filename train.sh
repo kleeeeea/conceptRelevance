@@ -1,4 +1,4 @@
-TEXT=../data/signal_processing__oneDocPerLine.txt
+TEXT=../data/scientific_corpus__oneDocPerLine.txt
 MODEL='ARL'
 
 source conf.d/autoPhrase.sh

@@ -11,7 +11,7 @@ from collections import defaultdict
     Example Line:
     1_1_1   */large_scale_distributed_systems   large_scale_distributed_systems,software_engineering,agile_development,software_development,software_process_improvement,software_process,agile_methods,requirements_engineering,web_services,software_reuse
 '''
-input_file_path = '../data/signal_processing/taxonomy_keywords_method_sp.txt'
+input_file_path = '../data/scientific_corpus/taxonomy_keywords_method_sp.txt'
 phrase_quality_file = open(input_file_path+'_phrase_quality', 'w')
 
 level2category2phrases = defaultdict(dict)
