@@ -1,6 +1,6 @@
 # Concept Relevance
 
-This repo contains the scripts needed to reproduce the concept based categorizations techniques for scientific publication, i.e., assigning scientific publications into different categories.
+This repo contains the scripts needed to reproduce the concept based categorizations for scientific publication, i.e., assigning scientific publications into different categories.
 
 ## Introduction
 The large volume of scientific publications is becoming prohibitive for researchers. According to the prominent [STM report](https://www.stm-assoc.org/2018_10_04_STM_Report_2018.pdf), 
