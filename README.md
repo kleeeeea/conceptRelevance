@@ -23,49 +23,53 @@ paper often involves concepts like “map and reduce” and
 We will take Ubuntu for example.
 
 * python 2.7
+
 ```
 $ sudo apt-get install python
 ```
-* other python packages
+* Python packages dependencies
+
 ```
 $ sudo pip install -r requirements.txt
 ```
-* [AutoPhrase](https://github.com/shangjingbo1226/AutoPhrase) 
-<!-- to extract domain keyphrases. Please refer to AutoPhrase documentation for installation and usage.
--->
+* The [AutoPhrase](https://github.com/shangjingbo1226/AutoPhrase) for phrasing mining. Please refer to the script if you plan to use custom installation directory.
 
-## Build
-Build AutoPhrase by Makefile in the terminal.
+
 ```
-$ cd SegPhrase
+$ cd ..
+$ git clone https://github.com/shangjingbo1226/AutoPhrase
+$ cd AutoPhrase
 $ make
+$ # Please refer to AutoPhrase documentation for installation and usage.
 ```
 
-## Run
-First, to fit our model to a corpus, run
+## Pipeline Overview
+The training pipeline is wrapped into a single script `/train.sh`, and one needs to specify the input and output by changing the following variables located at the begining of the script
+* ```TEXT```: the input text file
+* ```MODEL```: the path to store the model
+and to run the training pipeline as
+
 ```
 $ bash ./train.sh 
 ```
-and specify the input/output by changing the following variables at the begining of the script
-* ```TEXT```: the input text file
-* ```MODEL```: the path to store the model
 
-Then, query a specific set of documents, run
-```
-$ bash ./test.sh 
-```
-and specify the input/output by changing the following variables at the begining of the script
+The testing pipeline is wrapped into a single script `/test.sh`, and one needs to specify the input and output by changing the following variables located at the begining of the script
 * ```TEXT```: the input text file
 * ```CATEGORY_SEEDCONCEPTS```: one or more set of concepts to query
 * ```MODEL```: the path for the stored model you wish to use
 * ```SEGGED_TEXT_categorized```: the final output
+and to run the testing pipeline as
+
+```
+$ bash ./test.sh 
+```
 
 ## Input Format
 * The input files specified by ```TEXT``` for both ```train.sh``` and ```test.sh``` should be one document per line. 
-* The input file ```CATEGORY_SEEDCONCEPTS``` should have each line following the format ```[category name]\t[concept1],[concept2],[concept3]...```, and can contain one or more lines.
+* The categories' seed concepts file ```CATEGORY_SEEDCONCEPTS``` should have each line following the format ```[category name]\t[concept1],[concept2],[concept3]...```, and can contain one or more lines.
 
 ## Output Format
-The query relevance output, as specified by the `SEGGED_TEXT_categorized` in the begining of the ```test.sh```, is of the format of [relevance to concept set1], [relevance to concept set2]...
+* The query relevance output, as specified by the `SEGGED_TEXT_categorized` in the begining of the ```test.sh```, is of the format of [relevance to concept set1], [relevance to concept set2]...
 
 
 ## Hyper-Parameters
